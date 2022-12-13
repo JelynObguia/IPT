@@ -3,12 +3,12 @@
     <div>
         <div class="card">
              <div class="card-header bg-info">
-                 <h3>Edit Menu</h3>
+                 <h3>Edit Order</h3>
              </div>
              <div class="card-body">
                  <div class="form-floating mb-3">
                      <input type="text" class="form-control" wire:model.defer="main_dish">
-                     <label for="main_dish">Main Dish</label>
+                     <label for="main_dish">Cakes</label>
                      @error('main_dish')
                          <p class="text-danger">{{$message}}</p>
                      @enderror
@@ -23,15 +23,13 @@
                  <div class="form-floating mb-3">
                      <select name="beverages" class="form-select" wire:model.defer="beverages">
                          <option hidden="true">Select Beverages</option>
-                         <option selected disabled>"Select Beverages"></option>
-                         <option value="Soda">Soda</option>
-                         <option value="Bottled Water">Bottled Water</option>
-                         <option value="Wine">Wine</option>
-                         <option value="Beer">Beer</option>
-                         <option value="Shake">Shake</option>
-                         <option value="Tea">Tea</option>
+                         <option hidden="true">Select Flavor</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Mocha">Mocha</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                        <option value="Chifon">Chifon</option>
                      </select>
-                     <label for="beverages">Beverages</label>
+                     <label for="beverages">Flavors</label>
                      @error('beverages')
                          <p class="text-danger">{{$message}}</p>
                      @enderror

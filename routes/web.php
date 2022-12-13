@@ -18,15 +18,15 @@ use App\Http\Controllers\SiteController;
 Route::get('/', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout']);
-Route::get('/dashboard', [SeafoodController::class, 'index'])->middleware('auth');  
-Route::get('/edit/{seafood}', [SeafoodController::class, 'edit']);
-Route::get('/delete/{seafood}', [SeafoodController::class, 'destroy']);
-
-Route::group(['middleware' => ['auth', 'verified']], function(){
 Route::get('/register', [AuthController::class, 'registerForm']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::get('/verification/{user}/{token}', [AuthController::class, 'verification']);
-Route::get('/logs', [SiteController::class, 'logs']);
+
+Route::group(['middleware' => ['auth', 'verified']], function(){
+    Route::get('/dashboard', [SeafoodController::class, 'index']);
+    Route::get('/edit/{seafood}', [SeafoodController::class, 'edit']);
+    Route::get('/delete/{seafood}', [SeafoodController::class, 'destroy']);
+    Route::get('/logs', [SiteController::class, 'logs']);
 });
 
 

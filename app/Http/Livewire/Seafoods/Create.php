@@ -28,7 +28,7 @@ class Create extends Component
         $log_entry = 'Added a new menu ' . $menu->main_dish . ' with the ID# of ' . $menu->id;
         event(new UserLog($log_entry));
 
-        return redirect('/')->with('message', 'Added Successfully');
+        return redirect('/dashboard')->with('message', 'Added Successfully');
     }
 
     public function updated($propertyPrice)

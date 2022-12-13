@@ -2,12 +2,12 @@
     <div class="container col-md-6 offset-md-3 mt-3">
         <div class="card">
             <div class="card-header">
-                <h3 class="text-danger">Delete Menu?</h3>
+                <h3 class="text-danger">Delete Order?</h3>
             </div>
             <div class="card-body">
                 <table class="table">
                     <tr>
-                        <th>Main Dish</th>
+                        <th>type of Cake</th>
                         <td>{{$this->seafood->main_dish}}</td>
                     </tr>
                     <tr>
@@ -15,7 +15,7 @@
                         <td>{{$this->seafood->dessert}}</td>
                     </tr>
                     <tr>
-                        <th>Beverages</th>
+                        <th>Flavors</th>
                         <td>{{$this->seafood->beverages}}</td>
                     </tr>
                     <tr>
